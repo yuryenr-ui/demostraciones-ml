@@ -16,8 +16,10 @@
 # La componente $j$ de $Z^T\mathbf 1$ es la suma de la columna $j$ de $Z$:
 #
 # $$
-# (Z^T\mathbf 1)_j=\sum_{i=1}^n z_{ij}=\frac1{s_j}\sum_{i=1}^n(x_{ij}-\bar x_j)=\frac1{s_j}\Big(\sum_{i=1}^n x_{ij}-n\bar x_j\Big)
-# =\frac1{s_j}\big(n\bar x_j-n\bar x_j\big)=0,
+# \begin{aligned}
+# (Z^T\mathbf 1)_j&=\sum_{i=1}^n z_{ij}=\frac1{s_j}\sum_{i=1}^n(x_{ij}-\bar x_j)\\
+# &=\frac1{s_j}\Big(\sum_{i=1}^n x_{ij}-n\bar x_j\Big)=\frac1{s_j}\big(n\bar x_j-n\bar x_j\big)=0,
+# \end{aligned}
 # $$
 #
 # donde usé que $\sum_i x_{ij}=n\bar x_j$ por la definición de media. Como esto vale para $j=1,\dots,p$, $Z^T\mathbf 1$ es el
@@ -203,8 +205,10 @@ pd.DataFrame({
 # {prf:ref}`prop-cov` y {eq}`eq-w-espectral`,
 #
 # $$
-# \mathrm{Cov}(\hat{\boldsymbol\beta}_R)=\sigma^2\,Q(\Lambda+\lambda I)^{-1}Q^T\,Q\Lambda Q^T\,Q(\Lambda+\lambda I)^{-1}Q^T
-# =\sigma^2\,Q\,\mathrm{diag}\!\Big(\frac{l_j}{(l_j+\lambda)^2}\Big)Q^T ,
+# \begin{aligned}
+# \mathrm{Cov}(\hat{\boldsymbol\beta}_R)&=\sigma^2\,Q(\Lambda+\lambda I)^{-1}Q^T\,Q\Lambda Q^T\,Q(\Lambda+\lambda I)^{-1}Q^T\\
+# &=\sigma^2\,Q\,\mathrm{diag}\!\Big(\frac{l_j}{(l_j+\lambda)^2}\Big)Q^T ,
+# \end{aligned}
 # $$
 #
 # porque $Q^TQ=I$ y las matrices diagonales conmutan. Como $\mathrm{tr}(QDQ^T)=\mathrm{tr}(DQ^TQ)=\mathrm{tr}(D)$, la traza es

@@ -76,8 +76,10 @@
 # Desarrollando el cuadrado con $X^TX=nI$ y $X^T\boldsymbol y=n\boldsymbol b$:
 #
 # $$
-# S_\lambda(\boldsymbol\beta)=\boldsymbol y^T\boldsymbol y-2n\,\boldsymbol b^T\boldsymbol\beta+n\,\boldsymbol\beta^T\boldsymbol\beta+\lambda\sum_j|\beta_j|
-# =\boldsymbol y^T\boldsymbol y+\sum_{j=1}^p\big(n\beta_j^2-2nb_j\beta_j+\lambda|\beta_j|\big).
+# \begin{aligned}
+# S_\lambda(\boldsymbol\beta)&=\boldsymbol y^T\boldsymbol y-2n\,\boldsymbol b^T\boldsymbol\beta+n\,\boldsymbol\beta^T\boldsymbol\beta+\lambda\sum_j|\beta_j|\\
+# &=\boldsymbol y^T\boldsymbol y+\sum_{j=1}^p\big(n\beta_j^2-2nb_j\beta_j+\lambda|\beta_j|\big).
+# \end{aligned}
 # $$
 #
 # La función se separa en $p$ problemas de una variable, $f(\beta)=n\beta^2-2nb\beta+\lambda|\beta|$, que minimizo por casos:

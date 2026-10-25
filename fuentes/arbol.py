@@ -26,8 +26,10 @@ datos
 # sí y $n_{\text{no}}$ de la clase no,
 #
 # $$
-# \text{Gini}(\text{nodo})=1-\Big(\frac{n_{\text{sí}}}{N}\Big)^2-\Big(\frac{n_{\text{no}}}{N}\Big)^2,\qquad
-# \text{Gini}_{\text{split}}=\frac{N_1}{N}\text{Gini}(\text{nodo}_1)+\frac{N_2}{N}\text{Gini}(\text{nodo}_2).
+# \begin{aligned}
+# \text{Gini}(\text{nodo})&=1-\Big(\frac{n_{\text{sí}}}{N}\Big)^2-\Big(\frac{n_{\text{no}}}{N}\Big)^2,\\
+# \text{Gini}_{\text{split}}&=\frac{N_1}{N}\text{Gini}(\text{nodo}_1)+\frac{N_2}{N}\text{Gini}(\text{nodo}_2).
+# \end{aligned}
 # $$
 #
 # Para la edad, los umbrales candidatos son los puntos medios entre **valores distintos consecutivos** ordenados. El grupo

@@ -137,8 +137,10 @@
 # Con pesos iniciales $\omega_n^{(1)}=1/N$, el error de entrenamiento de $f=\operatorname{sgn}(F_K)$ cumple
 #
 # $$
-# \frac1N\sum_{n=1}^N\mathbb 1\{f(\boldsymbol x_n)\neq y_n\}\le\prod_{i=1}^K Z_i=\prod_{i=1}^K2\sqrt{P_i(1-P_i)}\le\exp\Big(-2\sum_{i=1}^K\gamma_i^2\Big),
-# \qquad\gamma_i:=\tfrac12-P_i .
+# \begin{aligned}
+# \frac1N\sum_{n=1}^N\mathbb 1\{f(\boldsymbol x_n)\neq y_n\}&\le\prod_{i=1}^K Z_i=\prod_{i=1}^K2\sqrt{P_i(1-P_i)}\\
+# &\le\exp\Big(-2\sum_{i=1}^K\gamma_i^2\Big),\qquad\gamma_i:=\tfrac12-P_i .
+# \end{aligned}
 # $$
 # ````
 #
