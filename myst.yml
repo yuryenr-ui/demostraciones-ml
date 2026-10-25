@@ -1,0 +1,19 @@
+# Jupyter Book 2 (MyST). Construir localmente: jupyter-book build --html  (requiere Node.js)
+version: 1
+project:
+  title: Demostraciones de Machine Learning
+  authors:
+    - name: Yuryen Rollo
+  license: CC-BY-4.0
+  numbering:
+    headings: true
+    equation: true
+  toc:
+    - file: index.md
+    - file: knn.md
+    - file: ridge.ipynb
+    - file: lasso.ipynb
+    - file: arbol.ipynb
+    - file: adaboost.ipynb
+site:
+  template: book-theme
