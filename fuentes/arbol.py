@@ -161,8 +161,17 @@ print("Aciertos en entrenamiento — propuesto:", (comp["árbol propuesto"] == c
 X = datos[["Age", "Like Dogs", "Like Gravity"]]
 arbol = DecisionTreeClassifier(criterion="gini", random_state=0).fit(X, datos["Astronaut"])
 print(export_text(arbol, feature_names=list(X.columns)))
-fig, ax = plt.subplots(figsize=(8, 4.5))
-plot_tree(arbol, feature_names=list(X.columns), class_names=["no", "sí"], filled=True, impurity=True, ax=ax)
+fig, ax = plt.subplots(figsize=(10, 6))
+plot_tree(arbol, feature_names=list(X.columns), class_names=["no", "sí"], filled=True, impurity=True, ax=ax,
+          fontsize=10)
+# scikit-learn pone "True"/"False" pegados a la caja de la raíz: los traduzco y los bajo hacia las flechas
+for t in ax.texts:
+    if t.get_text().strip() in ("True", "False"):
+        izquierda = t.get_text().strip() == "True"
+        t.set_text("Verdadero" if izquierda else "Falso")
+        x, y = t.get_position()
+        t.set_position((x + (-0.06 if izquierda else 0.06), y - 0.05))
+        t.set_fontweight("bold")
 plt.show()
 
 # %% [markdown]
